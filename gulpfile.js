@@ -8,13 +8,15 @@ let path = {
 		js: project_folder + '/js/',
 		img: project_folder + '/images/',
 		fonts: project_folder + '/fonts/',
+		icons: project_folder + '/icons/',
 	},
 	src: {
 		html: [source_folder + '/*.html', '!' + source_folder + '/_*.html'],
 		css: source_folder + '/scss/main.scss',
 		js: source_folder + '/js/index.js',
 		img: source_folder + '/images/**/*.{jpg,png,svg,gif,ico,webp}',
-		fonts: source_folder + '/fonts/**/*.{eot,svg,ttf,woff}',
+		fonts: source_folder + '/fonts/**/*.{eot,svg,ttf,woff,woff2}',
+		icons: source_folder + '/icons/**/*.*',
 	},
 	watch: {
 		html: source_folder + '/**/*.html',
@@ -126,6 +128,12 @@ function fonts() {
 		.pipe(browsersync.stream())
 }
 
+function icons() {
+	return src(path.src.icons)
+		.pipe(dest(path.build.icons))
+		.pipe(browsersync.stream())
+}
+
 function watchFiles() {
 	gulp.watch([path.watch.html], html);
 	gulp.watch([path.watch.css], css);
@@ -137,7 +145,7 @@ function clean() {
 	return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(css, html, js, images, fonts));
+let build = gulp.series(clean, gulp.parallel(css, html, js, images, fonts, icons));
 let watch = gulp.parallel(build, watchFiles, browse);
 
 exports.build = build;
@@ -146,5 +154,7 @@ exports.css = css;
 exports.js = js;
 exports.images = images;
 exports.fonts = fonts;
+exports.icons = icons;
+
 exports.watch = watch;
 exports.default = watch;

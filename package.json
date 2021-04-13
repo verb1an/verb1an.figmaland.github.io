@@ -1,7 +1,7 @@
 {
-  "name": "figmaland",
+  "name": "laslesvpn",
   "version": "1.0.0",
-  "description": "Верстка бесплатного макета figma land",
+  "description": "Верстка бесплатного макета lasles-vpn",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
