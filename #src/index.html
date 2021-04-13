@@ -10,19 +10,41 @@
     <script src="js/index.min.js"></script>
 </head>
 <body>
-    <header class="header">
+    @@include('html/_header.html')
+
+    <section class="section" id="intro">
         <div class="container">
-            <div class="header__inner">
-                <a href="" class="logo"><img src="images/logo.svg" alt=""></a>
-                <nav class="nav">
-                    <a href="#" class="nav__item">Home</a>
-                    <a href="#" class="nav__item">Product</a>
-                    <a href="#" class="nav__item">About</a>
-                    <a href="#" class="nav__item">Contact</a>
-                </nav>
-                <a href="" class="btn btn--dark" id="btn--login">Login</a>
+            <div class="section__inner">
+                <div class="section__headers">
+                    <h1 class="title">Work at the speed of thought</h1>
+                    <h3 class="subtitle">Most calendars are designed for teams. Slate is designed for freelancers who want a simple way to plan their schedule.</h3>
+                    <div class="buttons">
+                        <a class="btn btn--def" id="tryfree">Try For Free</a>
+                        <a class="btn btn--dark" id="learnmore">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <img src="images/intro/Boards.jpg" alt="">
+                    <img src="images/intro/Dashboard.jpg" alt="">
+                    <img src="images/intro/ChatBot.jpg" alt="">
+                </div>
             </div>
         </div>
-    </header>
+    </section>
+
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section__inner">
+                <div class="section__headers">
+                    <h2 class="title">FEATURES</h2>
+                    <h3 class="subtitle">Most calendars are designed for teams. Slate is designed for freelancers who want a simple way to plan their schedule.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
 </body>
 </html>
