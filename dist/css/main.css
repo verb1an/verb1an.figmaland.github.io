@@ -13,11 +13,62 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'figmaland';
+  src: url("../icons/font/figmaland.eot?6k1k5m");
+  src: url("../icons/font/figmaland.eot?6k1k5m#iefix") format("embedded-opentype"), url("../icons/font/figmaland.ttf?6k1k5m") format("truetype"), url("../icons/font/figmaland.woff?6k1k5m") format("woff"), url("../icons/font/figmaland.svg?6k1k5m#figmaland") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="i-"], [class*=" i-"] {
+  font-family: 'figmaland' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-mapmarker:before {
+  content: "\e900";
+}
+
+.i-phone:before {
+  content: "\e901";
+}
+
+.i-alien:before {
+  content: "\e902";
+}
+
+.i-eat:before {
+  content: "\e903";
+}
+
+.i-infinity:before {
+  content: "\e904";
+}
+
+.i-vk:before {
+  content: "\e905";
+}
+
+.i-telegram:before {
+  content: "\e906";
+}
+
+.i-inst:before {
+  content: "\e907";
+}
+
 html {
   line-height: 1.15;
-  /* 1 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
 }
 
 body {
@@ -36,18 +87,13 @@ h1 {
 hr {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
-  /* 1 */
   height: 0;
-  /* 1 */
   overflow: visible;
-  /* 2 */
 }
 
 pre {
   font-family: monospace, monospace;
-  /* 1 */
   font-size: 1em;
-  /* 2 */
 }
 
 a {
@@ -56,12 +102,9 @@ a {
 
 abbr[title] {
   border-bottom: none;
-  /* 1 */
   text-decoration: underline;
-  /* 2 */
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
-  /* 2 */
 }
 
 b,
@@ -73,9 +116,7 @@ code,
 kbd,
 samp {
   font-family: monospace, monospace;
-  /* 1 */
   font-size: 1em;
-  /* 2 */
 }
 
 small {
@@ -108,24 +149,18 @@ optgroup,
 select,
 textarea {
   font-family: inherit;
-  /* 1 */
   font-size: 100%;
-  /* 1 */
   line-height: 1.15;
-  /* 1 */
   margin: 0;
-  /* 2 */
 }
 
 button,
 input {
-  /* 1 */
   overflow: visible;
 }
 
 button,
 select {
-  /* 1 */
   text-transform: none;
 }
 
@@ -158,17 +193,11 @@ fieldset {
 legend {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  /* 1 */
   color: inherit;
-  /* 2 */
   display: table;
-  /* 1 */
   max-width: 100%;
-  /* 1 */
   padding: 0;
-  /* 3 */
   white-space: normal;
-  /* 1 */
 }
 
 progress {
@@ -183,9 +212,7 @@ textarea {
 [type="radio"] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  /* 1 */
   padding: 0;
-  /* 2 */
 }
 
 [type="number"]::-webkit-inner-spin-button,
@@ -195,9 +222,7 @@ textarea {
 
 [type="search"] {
   -webkit-appearance: textfield;
-  /* 1 */
   outline-offset: -2px;
-  /* 2 */
 }
 
 [type="search"]::-webkit-search-decoration {
@@ -206,9 +231,7 @@ textarea {
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
-  /* 1 */
   font: inherit;
-  /* 2 */
 }
 
 details {
@@ -303,6 +326,22 @@ header {
   top: 0;
   left: 0;
   padding: 30px 0;
+  -webkit-transition: 0.24s;
+  -o-transition: 0.24s;
+  transition: 0.24s;
+}
+
+header.scrolled {
+  padding: 15px 0;
+  background-color: #181818;
+  -webkit-box-shadow: 0 0 2px #FFFFFF;
+          box-shadow: 0 0 2px #FFFFFF;
+}
+
+header.hidden {
+  height: 0;
+  overflow: hidden;
+  padding: 0;
 }
 
 header .header__inner {
@@ -436,4 +475,56 @@ header .header__inner {
   -webkit-transform: rotateZ(90deg);
       -ms-transform: rotate(90deg);
           transform: rotateZ(90deg);
+}
+
+#features .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#features .stat {
+  position: relative;
+}
+
+#features .stat picture:last-child img {
+  position: absolute;
+  bottom: -10px;
+  right: -20px;
+}
+
+#features .features {
+  color: #FFFFFF;
+}
+
+#features .features .item span {
+  float: left;
+  margin: 20px 0;
+  color: #02E4C0;
+  font-size: 20px;
+}
+
+#features .features .item .title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.05rem;
+  margin-left: 46px;
+  max-width: 170px;
+}
+
+#features .features .item .text {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  max-width: 250px;
+}
+
+#features .features .item:last-child span {
+  font-size: 15px;
+  margin: 8px 0;
 }
