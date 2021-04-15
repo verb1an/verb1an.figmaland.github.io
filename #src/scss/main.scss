@@ -88,7 +88,7 @@ body{
     background-color: $c_dark;
 }
 
-header{
+.header{
     position: fixed;
     z-index: 100;
     width: 100%;
@@ -114,6 +114,37 @@ header{
         justify-content: space-between;
         align-items: center;
         padding: 0 25px;
+    }
+
+    .buttons{
+        display: flex;
+        align-items: center;
+    }
+
+    .bar{
+        width: 44px;
+        height: 26px;
+
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        z-index: 110;
+        margin-left: 20px;
+
+        .line{
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $c_white;
+
+            &:nth-child(2) {
+                width: 70%;
+            }
+            &:nth-child(3) {
+                width: 40%;
+            }
+        }
     }
 }
 
@@ -523,3 +554,5 @@ header{
         }
     }
 }
+
+@import 'media.scss';
