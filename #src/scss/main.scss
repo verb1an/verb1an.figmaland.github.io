@@ -15,6 +15,10 @@ $f_paragraf: 400 1.6rem 'Graphik';
 $f_item_title: 500 2rem 'Graphik';
 $f_button: 500 1.7rem 'Medium';
 
+*{
+    box-sizing: border-box;
+}
+
 html{
     font-family: 'Graphik';
     font-size: 20px;
@@ -33,6 +37,7 @@ a{
     color: $c_white;
     font-weight: 500;
     transition: 0.24s;
+    text-align: center;
 
     &.btn--dark{
         background-color: transparent;
@@ -107,6 +112,7 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 25px;
     }
 }
 
@@ -140,11 +146,12 @@ header{
 
     h1.title{
         font-size: 4rem;
+        font-weight: 500;
     }
 
     .title{
         font-size: 2.6rem;
-        font-weight: 500;
+        font-weight: 400;
     }
 
     .subtitle{
@@ -237,6 +244,7 @@ header{
         color: $c_white;
 
         .item{
+            margin-bottom: 25px;
 
             span{
                 float: left;
@@ -264,6 +272,169 @@ header{
                     font-size: 15px;
                     margin: 8px 0;
                 }
+            }
+        }
+    }
+}
+
+#contents{
+
+
+    .content{
+        display: flex;
+
+        .item{
+            position: relative;
+            background-color: $c_white;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 0 17px;
+            text-align: center;
+            width: 470px;
+            
+            padding-bottom: 350px;
+
+            .title{
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+
+            .text{
+                font-size: 0.8rem;
+                line-height: 1.2rem;
+                color: $c_scnd_text; 
+                max-width: 270px;
+                margin: 10px auto 30px;
+            }
+
+            .btn{
+                display: block;
+                width: 170px;
+                margin: 0 auto;
+            }
+
+            img{
+                position: absolute;
+                bottom: 40px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &:last-child{
+                .btn{
+                    width: 190px;
+                }
+                img{
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+#gallery{
+
+
+    .content{
+        text-align: center;
+
+        .gallery{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .item{
+            margin: 22px 12px;
+
+            img{
+                border-radius: 12px;
+            }
+        }
+    }
+}
+
+#partners{
+    .content{
+        text-align: center;
+
+        .partners{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+
+            a{
+                display: block;
+                margin: 0 37px;
+            }
+        }
+    }
+}
+
+
+#testimonials{
+
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .item{
+            color: $c_white;
+            border: 1px solid #DEDEDE;
+            border-radius: 10px;
+            padding: 40px 70px 40px 40px;
+            margin: 10px;
+            max-height: 304px;
+
+            .head{
+                display: flex;
+                margin-bottom: 30px;
+
+                img.avatar{
+                    width: 50px;
+                    height: 50px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    border: 2px solid #000;
+                    margin-right: 10px;
+                }
+
+                .info{
+                    .name{
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                        line-height: 1.2rem;
+                    }
+
+                    .prof{
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                        line-height: 1.2rem;
+                    }
+                }
+            }
+
+            .text{
+                max-width: 320px;
+
+                p{
+                    margin: 0;
+                    font-size: 0.8rem;
+                    font-weight: 400;
+                    line-height: 1.2rem;
+                    letter-spacing: 0.2px;
+                }
+            }
+
+
+            &:first-child {
+                max-height: 328px;
+            }
+
+            &:last-child {
+                transform: translateY(-24px);
             }
         }
     }

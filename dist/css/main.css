@@ -250,6 +250,11 @@ template {
   display: none;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   font-family: 'Graphik';
   font-size: 20px;
@@ -270,6 +275,7 @@ a {
   -webkit-transition: 0.24s;
   -o-transition: 0.24s;
   transition: 0.24s;
+  text-align: center;
 }
 
 .btn.btn--dark {
@@ -354,6 +360,7 @@ header .header__inner {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 25px;
 }
 
 .nav .nav__item {
@@ -387,11 +394,12 @@ header .header__inner {
 
 .section__headers h1.title {
   font-size: 4rem;
+  font-weight: 500;
 }
 
 .section__headers .title {
   font-size: 2.6rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .section__headers .subtitle {
@@ -503,6 +511,10 @@ header .header__inner {
   color: #FFFFFF;
 }
 
+#features .features .item {
+  margin-bottom: 25px;
+}
+
 #features .features .item span {
   float: left;
   margin: 20px 0;
@@ -527,4 +539,171 @@ header .header__inner {
 #features .features .item:last-child span {
   font-size: 15px;
   margin: 8px 0;
+}
+
+#contents .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#contents .content .item {
+  position: relative;
+  background-color: #FFFFFF;
+  padding: 40px;
+  border-radius: 10px;
+  margin: 0 17px;
+  text-align: center;
+  width: 470px;
+  padding-bottom: 350px;
+}
+
+#contents .content .item .title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+#contents .content .item .text {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  color: #5C5C5C;
+  max-width: 270px;
+  margin: 10px auto 30px;
+}
+
+#contents .content .item .btn {
+  display: block;
+  width: 170px;
+  margin: 0 auto;
+}
+
+#contents .content .item img {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#contents .content .item:last-child .btn {
+  width: 190px;
+}
+
+#contents .content .item:last-child img {
+  bottom: 0;
+}
+
+#gallery .content {
+  text-align: center;
+}
+
+#gallery .content .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+#gallery .content .item {
+  margin: 22px 12px;
+}
+
+#gallery .content .item img {
+  border-radius: 12px;
+}
+
+#partners .content {
+  text-align: center;
+}
+
+#partners .content .partners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+
+#partners .content .partners a {
+  display: block;
+  margin: 0 37px;
+}
+
+#testimonials .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#testimonials .content .item {
+  color: #FFFFFF;
+  border: 1px solid #DEDEDE;
+  border-radius: 10px;
+  padding: 40px 70px 40px 40px;
+  margin: 10px;
+  max-height: 304px;
+}
+
+#testimonials .content .item .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+#testimonials .content .item .head img.avatar {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #000;
+  margin-right: 10px;
+}
+
+#testimonials .content .item .head .info .name {
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+}
+
+#testimonials .content .item .head .info .prof {
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+}
+
+#testimonials .content .item .text {
+  max-width: 320px;
+}
+
+#testimonials .content .item .text p {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  letter-spacing: 0.2px;
+}
+
+#testimonials .content .item:first-child {
+  max-height: 328px;
+}
+
+#testimonials .content .item:last-child {
+  -webkit-transform: translateY(-24px);
+      -ms-transform: translateY(-24px);
+          transform: translateY(-24px);
 }
