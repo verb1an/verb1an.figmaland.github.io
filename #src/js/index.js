@@ -4,7 +4,10 @@ document.addEventListener('DOMContentLoaded', function()  {
 })
 
 const headerFunctions = () => {
-    const introPT = Number.parseInt(window.getComputedStyle(document.querySelector('#intro')).paddingTop.replace('px', ''));
+    const introPT = 130;
+    if( document.querySelector('#intro') ) {
+        const introPT = Number.parseInt(window.getComputedStyle(document.querySelector('#intro')).paddingTop.replace('px', ''));
+    }
     window.addEventListener('scroll', function() {
         background();
     });
